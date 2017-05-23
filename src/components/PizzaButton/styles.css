@@ -1,0 +1,37 @@
+.PizzaButton {
+  display: block;
+  padding: 30px;
+}
+
+.PizzaButton button {
+  cursor: pointer;
+  background: #1094d2;
+  color: #fff;
+  padding: 10px 15px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: all .2s ease-in-out;
+}
+
+.PizzaButton button img {
+  margin: 0 8px 0 0;
+}
+
+.PizzaButton button:hover {
+  background: #0f87bf;
+}
+
+.PizzaButton button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 550px) {
+  .PizzaButton button {
+    width: 100%;
+    justify-content: center;
+  }
+}
