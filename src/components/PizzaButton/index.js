@@ -15,8 +15,7 @@ const defaultProps = {
   onClick() {},
 };
 
-const PizzaButton = props => {
-  const { children, isEnable, onClick } = props;
+const PizzaButton = ({ children, isEnable, onClick }) => {
   return (
     <div className="PizzaButton">
       <button disabled={!isEnable} onClick={onClick}><img src={add} alt="Add" />{children}</button>

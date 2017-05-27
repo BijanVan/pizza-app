@@ -8,6 +8,7 @@ const propTypes = {
   toppings: PropTypes.arrayOf(PropTypes.string),
   selected: PropTypes.arrayOf(PropTypes.string),
   onSelect: PropTypes.func,
+  onBlur: PropTypes.func,
 };
 
 const defaultProps = {
@@ -15,17 +16,17 @@ const defaultProps = {
   toppings: [],
   selected: [],
   onSelect() {},
+  onBlur() {},
 };
 
-const ToppingsSelector = props => {
-  const { isValid, toppings, selected, onSelect } = props;
-
+const ToppingsSelector = ({ isValid, toppings, selected, onSelect, onBlur }) => {
   function handleClick(event) {
     const index = selected.indexOf(event.target.id);
     if (index >= 0) event.target.value = [...selected.slice(0, index), ...selected.slice(index + 1)];
     else event.target.value = [...selected, event.target.id];
     event.target.name = 'toppingsSelector';
     onSelect(event);
+    onBlur(event);
   }
 
   return (

@@ -5,22 +5,22 @@ import './styles.css';
 
 const propTypes = {
   isValid: PropTypes.bool,
+  value: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
 };
 
 const defaultProps = {
   isValid: true,
+  value: '',
   onChange() {},
   onBlur() {},
 };
 
-const PizzaName = props => {
-  const { isValid, onChange, onBlur } = props;
-
+const PizzaName = ({ isValid, value, onChange, onBlur }) => {
   return (
     <div className="PizzaName">
-      <input name="pizzaName" type="text" placeholder="Pizza name, e.g. Blazin' hot" onChange={onChange} onBlur={onBlur} />
+      <input name="pizzaName" type="text" value={value} placeholder="Pizza name, e.g. Blazin' hot" onChange={onChange} onBlur={onBlur} />
       {isValid ? null : <div className="PizzaName-error">Pizza name is required</div>}
     </div>
   );

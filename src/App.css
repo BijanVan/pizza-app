@@ -1,19 +1,48 @@
 .App {
   max-width: 96%;
   display: flex;
+  flex-direction: column;
   margin: 25px 0;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
+  border: 1px solid #c1cedb;
+  border-radius: 3px;
+  overflow: hidden;
   justify-content: center;
   @media screen and (max-width: 600px) {
     margin: 10px 0;
   }
 }
 
-
-/*.App-intro {
-  font-size: large;
+.App-panes {
+  display: flex;
+  @media screen and (max-width: 750px) {
+    display: block;
+  }
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
+.App-form {
+  flex: 1 0 60%;
+}
+
+.App-title {
+  background: #1094d2;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.App-title h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.App-title h1 img {
+  width: 40px;
+  margin: 0 10px 0 0;
+}
