@@ -2,7 +2,7 @@
   "name": "pizza-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/pizza-app",
+  "homepage": "https://bijanvan.github.io/pizza-app",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
